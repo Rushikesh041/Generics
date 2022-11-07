@@ -10,7 +10,7 @@
 
             Console.WriteLine("Second number is largest :  " + compare.Largest(40, 60, 20));
 
-            Console.WriteLine("largest number is  :  " + compare.Largest(60.2f, 70.5f, 30.3f));
+            Console.WriteLine("largest number is  :  " + compare.Largest(60.2f, 80.5f, 30.3f));
         }
     }
 }
