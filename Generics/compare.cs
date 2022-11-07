@@ -9,7 +9,7 @@ namespace Generics
     public class compare
     {
 
-        public static int Largest(int Num1, int Num2, int Num3)
+        public static float Largest(float Num1, float Num2, float Num3)
         {
 
             if (Num1.CompareTo(Num2) > 0 && Num1.CompareTo(Num3) > 0 ||
@@ -30,7 +30,7 @@ namespace Generics
             {
                 return Num3;
             }
-            return Num3;
+            return Num1;
         }
     }
 
