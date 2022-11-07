@@ -30,7 +30,7 @@ namespace Generics
             {
                 return Num3;
             }
-            return Num1;
+            return Num3;
         }
     }
 
