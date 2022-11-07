@@ -9,28 +9,28 @@ namespace Generics
     public class compare
     {
 
-        public static float Largest(float Num1, float Num2, float Num3)
+        public static string Largest(string String1, string String2, string String3)
         {
 
-            if (Num1.CompareTo(Num2) > 0 && Num1.CompareTo(Num3) > 0 ||
-                Num1.CompareTo(Num2) >= 0 && Num1.CompareTo(Num3) > 0 ||
-                Num1.CompareTo(Num2) > 0 && Num1.CompareTo(Num3) >= 0)
+            if (String1.CompareTo(String2) > 0 && String1.CompareTo(String3) > 0 ||
+                 String1.CompareTo(String2) >= 0 && String1.CompareTo(String3) > 0 ||
+                 String1.CompareTo(String2) > 0 && String1.CompareTo(String3) >= 0)
             {
-                return Num1;
+                return String1;
             }
-            if (Num2.CompareTo(Num1) > 0 && Num2.CompareTo(Num3) > 0 ||
-                Num2.CompareTo(Num1) >= 0 && Num2.CompareTo(Num3) > 0 ||
-                Num2.CompareTo(Num1) > 0 && Num2.CompareTo(Num3) >= 0)
+            if (String2.CompareTo(String1) > 0 && String2.CompareTo(String3) > 0 ||
+                String2.CompareTo(String1) >= 0 && String2.CompareTo(String3) > 0 ||
+                String2.CompareTo(String1) > 0 && String2.CompareTo(String3) >= 0)
             {
-                return Num2;
+                return String2;
             }
-            if (Num3.CompareTo(Num1) > 0 && Num3.CompareTo(Num2) > 0 ||
-                Num3.CompareTo(Num1) >= 0 && Num3.CompareTo(Num2) > 0 ||
-                Num3.CompareTo(Num1) > 0 && Num3.CompareTo(Num2) >= 0)
+            if (String3.CompareTo(String1) > 0 && String3.CompareTo(String2) > 0 ||
+                String3.CompareTo(String1) >= 0 && String3.CompareTo(String2) > 0 ||
+                String3.CompareTo(String1) > 0 && String3.CompareTo(String2) >= 0)
             {
-                return Num3;
+                return String3;
             }
-            return Num3;
+            return String1;
         }
     }
 
