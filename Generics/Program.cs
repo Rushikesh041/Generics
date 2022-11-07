@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("First number is largest :  " + compare.Largest(60, 50, 20));
+            Console.WriteLine("largest number is  :  " + compare.Largest(60.2f, 50.5f, 20.3f));
         }
     }
 }
