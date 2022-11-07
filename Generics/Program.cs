@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Largest string is  :  " + compare.Largest("Latur","Aurangabad","Pune")); 
+            Console.WriteLine("Largest string is  :  " + compare.Largest("Goa","Punjab","Maharashtra")); 
         }
     }
 }
