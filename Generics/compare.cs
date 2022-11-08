@@ -6,34 +6,56 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public class compare
+
+    public class Compare<L> where L : IComparable
     {
-
-        public static string Largest(string String1, string String2, string String3)
+        public L val1, val2, val3, val4;
+        public Compare(L val1, L val2, L val3, L val4)
         {
+            this.val1 = val1;
+            this.val2 = val2;
+            this.val3 = val3;
+            this.val4 = val4;
 
-            if (String1.CompareTo(String2) > 0 && String1.CompareTo(String3) > 0 ||
-                 String1.CompareTo(String2) >= 0 && String1.CompareTo(String3) > 0 ||
-                 String1.CompareTo(String2) > 0 && String1.CompareTo(String3) >= 0)
+        }
+        public static L Largest<L>(L val1, L val2, L val3, L val4) where L : IComparable
+        {
+            if (val1.CompareTo(val2) > 0 && val1.CompareTo(val3) > 0 && val1.CompareTo(val4) > 0 ||
+                val1.CompareTo(val2) >= 0 && val1.CompareTo(val3) > 0 && val1.CompareTo(val4) > 0 ||
+                val1.CompareTo(val2) > 0 && val1.CompareTo(val3) >= 0 && val1.CompareTo(val4) > 0 ||
+                val1.CompareTo(val2) > 0 && val1.CompareTo(val3) > 0 && val1.CompareTo(val4) >= 0)
             {
-                return String1;
+                return val1;
             }
-            if (String2.CompareTo(String1) > 0 && String2.CompareTo(String3) > 0 ||
-                String2.CompareTo(String1) >= 0 && String2.CompareTo(String3) > 0 ||
-                String2.CompareTo(String1) > 0 && String2.CompareTo(String3) >= 0)
+            if (val2.CompareTo(val1) > 0 && val2.CompareTo(val3) > 0 && val2.CompareTo(val4) > 0 ||
+                val2.CompareTo(val1) >= 0 && val2.CompareTo(val3) > 0 && val2.CompareTo(val4) > 0 ||
+                val2.CompareTo(val1) > 0 && val2.CompareTo(val3) >= 0 && val2.CompareTo(val4) > 0 ||
+                val2.CompareTo(val1) > 0 && val2.CompareTo(val3) > 0 && val2.CompareTo(val4) >= 0)
             {
-                return String2;
+                return val2;
             }
-            if (String3.CompareTo(String1) > 0 && String3.CompareTo(String2) > 0 ||
-                String3.CompareTo(String1) >= 0 && String3.CompareTo(String2) > 0 ||
-                String3.CompareTo(String1) > 0 && String3.CompareTo(String2) >= 0)
+            if (val3.CompareTo(val1) > 0 && val3.CompareTo(val2) > 0 && val3.CompareTo(val4) > 0 ||
+                val3.CompareTo(val1) >= 0 && val3.CompareTo(val2) > 0 && val3.CompareTo(val4) > 0 ||
+                val3.CompareTo(val1) > 0 && val3.CompareTo(val2) >= 0 && val3.CompareTo(val4) > 0 ||
+                val3.CompareTo(val1) > 0 && val3.CompareTo(val2) > 0 && val3.CompareTo(val4) >= 0)
             {
-                return String3;
+                return val3;
             }
-            return String1;
+            if (val4.CompareTo(val1) > 0 && val4.CompareTo(val2) > 0 && val4.CompareTo(val3) > 0 ||
+                val4.CompareTo(val1) >= 0 && val4.CompareTo(val2) > 0 && val4.CompareTo(val3) > 0 ||
+                val4.CompareTo(val1) > 0 && val4.CompareTo(val2) >= 0 && val4.CompareTo(val3) > 0 ||
+                val4.CompareTo(val1) > 0 && val4.CompareTo(val2) > 0 && val4.CompareTo(val3) >= 0)
+            {
+                return val4;
+            }
+            return default;
+        }
+        public L MaxMethod()
+        {
+            L Max = Compare<L>.Largest(this.val1, this.val2, this.val3, this.val4);
+            return Max;
         }
     }
-
 }
 
 
