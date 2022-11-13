@@ -10,6 +10,10 @@
             Console.WriteLine("Largest Number is : " + maximumFloat.MaxMethod());
             Compare<string> maximumString = new Compare<string>("40", "60","80", "90");
             Console.WriteLine("Largest String is : " + maximumString.MaxMethod());
+
+            int[] arr = { 100, 151, 333, 555, 575 };
+            MaxMethod<int> maxMethod = new MaxMethod<int>(arr);
+            maxMethod.PrintMaxValue();
         }
     }
 }

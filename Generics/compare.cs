@@ -55,6 +55,7 @@ namespace Generics
             L Max = Compare<L>.Largest(this.val1, this.val2, this.val3, this.val4);
             return Max;
         }
+
     }
 }
 
